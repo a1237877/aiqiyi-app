@@ -1,0 +1,35 @@
+<view class="container">
+    <!-- 顶部搜索框 -->
+    <view class="section">
+        <view class=" left">
+            <image src="../../images/zhuye.png" class="image" />
+        </view>
+        <view class=" searchBar">
+            <view class="section searBar-box {{isTap?'tap':''}}">
+                <image src="../../images/search.png" mode="aspectFill" class="search-icon" />
+                <input type="text" name="searchBar" disabled="true" placeholder="想看什么" placeholder-class="search-plac" bindtap="toSearch" />
+            </view>
+        </view>
+    </view>
+
+    <!-- 轮播图 -->
+    <view class="section section-swiper">
+		<swiper class="slide" indicator-dots="{{indicator_dots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+			<block wx:for="{{index_slides}}" wx:key="{{index}}">
+				<swiper-item>
+					<image src="{{item.slide_url}}" mode="widthFix" class="slide-image" data-id="{{item.id}}" />
+				</swiper-item>
+			</block>
+		</swiper>
+    </view>
+    
+    <!-- 热播剧 -->
+    <view class="section section-hot">
+        <view class="header">
+            <span class="title">爱奇艺热播剧</span>
+            <span class="list">榜单</span>
+            <view class="arrow"></view>
+        </view>
+    </view>
+
+</view>
