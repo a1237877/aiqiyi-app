@@ -1,2 +1,19 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="mine">
+    <view class="header">
+        <view class="touxiang">
+            <image mode="aspectFill" src="https://img.52z.com/upload/news/image/20181108/20181108204521_83402.jpg" />
+        </view>
+        <view class="desc">
+            <button bindtap="denglu">登陆</button>
+        </view>
+    </view>
+    <view class="bg">
+    </view>
+    <view class="main">
+        <view class="desc" bindtap="set">设置</view>
+        <view class="arrow"></view>
+    </view>
+    <view class="bg">
+    </view>
+
+</view>

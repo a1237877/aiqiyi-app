@@ -22,14 +22,41 @@
 			</block>
 		</swiper>
     </view>
-    
-    <!-- 热播剧 -->
-    <view class="section section-hot">
+    <view class="section section-hot-title">
         <view class="header">
             <span class="title">爱奇艺热播剧</span>
             <span class="list">榜单</span>
             <view class="arrow"></view>
         </view>
+    </view>
+    <!-- 热播剧 -->
+    <view class="section section-hot">
+        
+        <view class="section hot-list" wx:for="{{hot_data}}" wx:key="index">
+			<navigator url="{{item.hot_urls}}" hover-class="none">
+				<view class="hot-item">
+					<image src="{{item.hot_img}}" class="item-img" />
+					<text class="item-text">{{item.hot_title}}</text>
+				</view>
+			</navigator>
+		</view>
+    </view>
+
+    <!-- 娱乐有新事 -->
+    <view class="">娱乐有新事</view>
+    <view class="section section-news">
+        <!-- <block wx:for="{{news_lists}}" wx:key="index" wx:for-item="news"> -->
+            <view class="news-lists">
+                <image class="news-img" src="{{news.news-img}}" />
+                <text class="text">{{news.header}}</text>
+                <text class="desc">{{news.description}}</text>
+            </view> 
+            <view class="news-lists1">
+                <image class="news-img" src="{{news.news-img}}" />
+                <text class="text">{{news.header}}</text>
+                <text class="desc">{{news.description}}</text>
+            </view> 
+        <!-- </block> -->
     </view>
 
 </view>
